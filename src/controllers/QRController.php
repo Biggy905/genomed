@@ -28,9 +28,6 @@ final class QRController extends AbstractController
 
     public function actionIndex(string $slug): Response
     {
-        var_dump($this->id);
-        var_dump($this->module);
-        die;
         $form = $this->slugForm;
         $defaultRoute = match ($form->runValidate(['slug' => $slug])) {
             true => $this->linkLogService->read($form),

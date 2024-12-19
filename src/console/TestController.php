@@ -10,6 +10,5 @@ final class TestController extends Controller
     public function actionTest(): void
     {
         echo "Hello world!";
-        //var_dump(Yii::$app);
     }
 }
