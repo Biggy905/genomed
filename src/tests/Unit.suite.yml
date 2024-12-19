@@ -1,0 +1,30 @@
+actor: UnitTester
+suite_namespace: Tests\Unit
+bootstrap: config/index.php
+memory_limit: 1024M
+colors: true
+modules:
+    enabled:
+        - Asserts
+        - Yii2:
+            part: [orm, fixtures]
+            configFile: 'tests/Unit/config/config.php'
+    step_decorators: ~
+coverage:
+    enabled: true
+    whitelist:
+        include:
+            - entities/*
+            - forms/*
+            - groups/*
+            - queries/*
+            - repositories/*
+            - services/*
+        exclude:
+            - components/*
+            - controllers/*
+            - migrations/*
+            - resources/*
+            - vendor/*
+            - views/*
+            - tests/*

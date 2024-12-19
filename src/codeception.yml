@@ -1,0 +1,22 @@
+namespace: Tests
+actor_suffix: Tester
+support_namespace: Support
+bootstrap: bootstrap.php
+paths:
+    tests: tests
+    log: tests/_output
+    output: tests/_output
+    data: tests/Support/Data
+    support: tests/Support
+    helpers: tests/Support
+    envs: tests/_envs
+settings:
+    colors: true
+    memory_limit: 1024M
+modules:
+    config:
+        Yii2:
+            configFile: 'tests/Unit/config/config.php'
+extensions:
+    enabled:
+        - Codeception\Extension\RunFailed
